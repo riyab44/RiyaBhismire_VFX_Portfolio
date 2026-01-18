@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riya Bhismire | VFX Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@400;500&family=Open+Sans:wght@400;600&family=Saira+Stencil+One&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/azonix" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Riya Bhismire</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Parallax -->
+    <header class="hero" id="hero">
+        <!-- Background Layer (slowest) -->
+        <div class="parallax-layer parallax-bg"></div>
+
+        <!-- Midground Layer -->
+        <div class="parallax-layer parallax-mid">
+            <div class="hero-overlay"></div>
+            <div class="moon-glow"></div>
+            <div class="waterfall-glow"></div>
+        </div>
+
+        <!-- Foreground Layer (fastest - content) -->
+        <div class="parallax-layer parallax-fg">
+            <div class="hero-content">
+                <h1 class="main-title">PORTFOLIO</h1>
+                <p class="subtitle">RIYA BHISMIRE | VISUAL EFFECTS ARTIST</p>
+            </div>
+            <div class="banner-label">MATTE PAINTING</div>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title reveal-base reveal-bottom">Projects</h2>
+            <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card reveal-base reveal-bottom" onclick="openModal('project1')">
+                    <div class="media-container">
+                        <video
+                            src="https://res.cloudinary.com/du3n5n16d/video/upload/v1768656097/Paint_Prep_Showreel_bewe7o.mp4"
+                            autoplay loop muted playsinline class="card-video"></video>
+                    </div>
+                    <h3 class="card-title">Paint Prep showreel</h3>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="project-card reveal-base reveal-bottom" onclick="openModal('project2')">
+                    <div class="media-container">
+                        <video
+                            src="https://res.cloudinary.com/du3n5n16d/video/upload/v1768656972/Roto_Showreel_dmzser.mp4"
+                            autoplay loop muted playsinline class="card-video"></video>
+                    </div>
+                    <h3 class="card-title">Roto_Showreel</h3>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="project-card reveal-base reveal-bottom" onclick="openModal('project3')">
+                    <div class="media-container">
+                        <video src="https://res.cloudinary.com/du3n5n16d/video/upload/v1768656973/Vfx_Comp1_i5nfov.mp4"
+                            autoplay loop muted playsinline class="card-video"></video>
+                    </div>
+                    <h3 class="card-title">Vfx_Comp1</h3>
+                </div>
+                <!-- Project Card 4 -->
+                <div class="project-card reveal-base reveal-bottom" onclick="openModal('project4')">
+                    <div class="media-container">
+                        <video src="https://res.cloudinary.com/du3n5n16d/video/upload/v1768656972/Vfx_Comp2_c9br8a.mp4"
+                            autoplay loop muted playsinline class="card-video"></video>
+                    </div>
+                    <h3 class="card-title">Vfx_Comp2</h3>
+                </div>
+                <!-- Project Card 5 -->
+                <div class="project-card reveal-base reveal-bottom" onclick="openModal('project5')">
+                    <div class="media-container">
+                        <video src="https://res.cloudinary.com/du3n5n16d/video/upload/v1768656969/Vfx_Comp3_labmnm.mp4"
+                            autoplay loop muted playsinline class="card-video"></video>
+                    </div>
+                    <h3 class="card-title">Vfx_Comp3</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <h2 id="modalTitle">Project Title</h2>
+                <div class="video-container">
+                    <video id="modalVideo" controls loop autoplay>
+                        <source src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="project-info">
+                    <p class="software"><strong>Software:</strong> <span id="modalSoftware">Nuke, Mocha</span></p>
+                    <p id="modalDesc">Project description goes here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Me Section -->
+    <section id="about" class="section about-section">
+        <canvas id="about-canvas"></canvas>
+        <div class="container about-container">
+            <div class="about-text reveal-base reveal-left">
+                <h2>Hello !</h2>
+                <p>I’m Riya Bhismire, a passionate VFX Artist who has completed the Specialization Program in VFX from
+                    Frameboxx Animation & VFX, FC Road, Pune. As a fresher, I bring strong foundational skills in Nuke,
+                    Silhouette, Mocha, Adobe Audition, Premiere Pro, and Photoshop, with a keen eye for detail and
+                    storytelling. I enjoy crafting seamless visual effects, clean compositing, and polished
+                    post-production work, and I’m constantly learning to push creative and technical boundaries in every
+                    project I take on.</p>
+            </div>
+            <div class="about-skills reveal-base reveal-right">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <img src="assets/nuke_logo_clean.png" alt="Nuke" class="skill-icon">
+                        <span>Nuke</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="assets/silhouette_logo_clean.png" alt="Silhouette" class="skill-icon">
+                        <span>Silhouette</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="assets/mocha_logo_clean.png" alt="Mocha" class="skill-icon">
+                        <span>Mocha</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="assets/premiere_logo_clean.png" alt="Premiere Pro" class="skill-icon">
+                        <span>Premiere Pro</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="assets/photoshop_logo_clean.png" alt="Photoshop" class="skill-icon">
+                        <span>Photoshop</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="assets/blender_logo.png" alt="Blender" class="skill-icon">
+                        <span>Blender</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <canvas id="contact-canvas"></canvas>
+        <div class="container">
+            <div class="contact-links reveal-base reveal-bottom">
+                <a href="mailto:bhismireriya04@gmail.com" class="contact-link" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://linkedin.com/in/riya-vfx-uiux-artist" target="_blank" class="contact-link"
+                    title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://youtube.com/@riyabhismire?si=GdiPNicqHfq46GG2" target="_blank"
+                    class="contact-link youtube-link" title="YouTube">
+                    <i class="fab fa-youtube"></i>
+
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Hope you enjoyed my portfolio ❤️</p>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script src="js/bg-animation.js"></script>
+</body>
+
+</html>
